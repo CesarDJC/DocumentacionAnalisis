@@ -1,0 +1,44 @@
+ create database Clientes
+ use Clientes
+ create table Clientes(
+ Id INT AUTO_INCREMENT PRIMARY KEY,
+ datos_cliente TEXT NOT NULL,
+ CHECK (JSON_VALID(datos_cliente))
+ 
+ );
+
+INSERT INTO Clientes (datos_cliente) VALUES ('{
+    "nit": "123456789",
+    "nombre": "Juan Pérez",
+    "direccion": "Calle 123",
+    "telefono": "5551234",
+    "correo": "juan@gmail.com"
+}');
+
+
+INSERT INTO Clientes (datos_cliente) VALUES ('{
+    "nit": "777654325",
+    "nombre": "Emerson Josue",
+    "direccion": "San Cristobal",
+    "telefono": "66645378",
+    "correo": "emerson@gmail.com"
+}');
+
+
+INSERT INTO Clientes (datos_cliente) VALUES ('{
+    "nit": "123456789",
+    "nombre": "Juan Pérez",
+    "direccion": "Calle 123",
+    "telefono": "5551234",
+    "correo": "juan@gmail.com"
+}');
+
+
+
+INSERT INTO Clientes (datos_cliente) VALUES ('{
+    "nit": "888888889",
+    "nombre": "Adalberto Ché",
+    "direccion": "Coban",
+    "telefono": "88764533",
+    "correo": "Adalberto@gmail.com"
+}');
